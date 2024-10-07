@@ -1,7 +1,8 @@
 #include <Arduino.h>
 
 // put function declarations here:
-int myFunction(int, int);
+int Multiplication(int, int);
+int Addition(int, int);
 
 void setup() 
 {
@@ -19,7 +20,9 @@ void loop()
 }
 
 // put function definitions here:
-int myFunction(int x, int y) 
-{
-  
+int Multiplication(int x, int y) {
+  return x * y;
 }
+int Addition(int x, int y) {
+  return x + y;
+ }
