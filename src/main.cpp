@@ -4,41 +4,41 @@
 int Multiplication(int, int);
 int Addition(int, int);
 
+int x, y, n;
+
 void setup() 
 {
   // put your setup code here, to run once:
   pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);
 Serial.println("Do you want addition (1) or multiplication (2)? Input the number (1 or 2):");
 while (Serial.available() == 0) {
 }
-int n = Serial.parseInt();
+n = Serial.parseInt();
 
 Serial.println("Number 1:");
 while (Serial.available() == 0) {
 }
-int x = Serial.parseInt();
+x = Serial.parseInt();
 
 Serial.println("Number 2:");
 while (Serial.available() == 0) {
 }
-int y = Serial.parseInt();
+y = Serial.parseInt();
+
+if (Serial.parseInt() == 1) {
+  Addition(x, y);
+}
+
+else if (Serial.parseInt() == 2) {
+  Multiplication(x, y);
+}
 
 }
 
 void loop() 
 {
   // put your main code here, to run repeatedly:
-  while (Serial.available())
-  {
-    if (Serial.parseint() == 1)
-    {
-      Addition(int x, int y);
-    }
-    if (Serial.parseint() == 2)
-    {
-      Multiplication(int x, int y);
-    }
-  }
   digitalwrite(LED_BUILTIN, HIGH);
   delay(1000);
   digitalWrite(LED_BUILTIN, LOW);
