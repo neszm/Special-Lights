@@ -39,7 +39,7 @@ else if (Serial.parseInt() == 2) {
 void loop() 
 {
   // put your main code here, to run repeatedly:
-  digitalwrite(LED_BUILTIN, HIGH);
+  digitalWrite(LED_BUILTIN, HIGH);
   delay(1000);
   digitalWrite(LED_BUILTIN, LOW);
   delay(1000);
