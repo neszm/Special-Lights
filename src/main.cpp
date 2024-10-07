@@ -13,6 +13,17 @@ void setup()
 void loop() 
 {
   // put your main code here, to run repeatedly:
+  while (Serial.available())
+  {
+    if (Serial.parseint() == 1)
+    {
+      Addition(int x, int y);
+    }
+    if (Serial.parseint() == 2)
+    {
+      Multiplication(int x, int y);
+    }
+  }
   digitalwrite(LED_BUILTIN, HIGH);
   delay(1000);
   digitalWrite(LED_BUILTIN, LOW);
