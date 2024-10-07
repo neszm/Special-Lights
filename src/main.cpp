@@ -8,6 +8,21 @@ void setup()
 {
   // put your setup code here, to run once:
   pinMode(LED_BUILTIN, OUTPUT);
+Serial.println("Do you want addition (1) or multiplication (2)? Input the number (1 or 2):");
+while (Serial.available() == 0) {
+}
+int n = Serial.parseInt();
+
+Serial.println("Number 1:");
+while (Serial.available() == 0) {
+}
+int x = Serial.parseInt();
+
+Serial.println("Number 2:");
+while (Serial.available() == 0) {
+}
+int y = Serial.parseInt();
+
 }
 
 void loop() 
